@@ -5,3 +5,9 @@ RepositoryServiceProvider registration in config/app
 
 
 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
+
+git remote add origin https://laravel-core-modules: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@github.com/laravel-core-modules/laravel-service-repository.git
+
+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
+
+git remote set-url origin https://laravel-core-modules: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@github.com/laravel-core-modules/laravel-service-repository.git
