@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/BenSampo/laravel-service-repository/raw/master/branding/logo.svg?sanitize=true" alt="Laravel Service Repository" width="250" style="margin-bottom: 20px"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/nunomaduro/larastan/master/docs/logo.png?sanitize=true" alt="Laravel Service Repository" width="250" style="margin-bottom: 20px"></p>
 <p align="center">
 <a href="https://travis-ci.org/BenSampo/laravel-enum"><img src="https://travis-ci.org/BenSampo/laravel-enum.svg?branch=master" alt="Build Status"></a>
 <a href="https://packagist.org/packages/laravel-core-modules/laravel-service-repository"><img src="https://img.shields.io/packagist/v/laravel-core-modules/laravel-service-repository.svg?style=flat-square&label=stable" alt="Packagist Stable Version"></a>
