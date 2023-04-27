@@ -51,6 +51,7 @@
   "autoload": {
     "psr-4": {
       "LaravelCoreModule\\ServiceRepository\\": "src/",
+      "LaravelCoreModule\\ServiceRepository\\RepositoryServiceProvider\\": "src/RepositoryServiceProvider/",
       "LaravelCoreModule\\ServiceRepository\\Repository\\": "core/Repository/",
       "LaravelCoreModule\\ServiceRepository\\Service\\": "core/Service/"
     }
