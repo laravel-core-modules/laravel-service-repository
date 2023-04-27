@@ -23,6 +23,10 @@ This is a simple and extensible package for improving development time via servi
 
 Created by [Corine BOCOGA](https://corine.b.github)
 
+## Official Documentation
+
+Documentation for Testbench can be found on the [packages.tools/testbench](https://packages.tools/testbench).
+
 ## Jump To
 
 - [Guide](#guide)
@@ -1042,3 +1046,70 @@ Run the following command to publish the stub files to the `Modules` folder in t
 ```shell
 php artisan vendor:publish --provider="LaravelCoreModule\\ServiceRepository\\RepositoryServiceProvider" --tag="modules"
 ```
+
+
+## Ignoring errors
+
+Ignoring a specific error can be done either with a php comment or in the configuration file: 
+
+```php
+// @phpstan-ignore-next-line
+$test->badMethod();
+
+$test->badMethod(); // @phpstan-ignore-line
+```
+
+When ignoring errors in PHPStan's configuration file, they are ignored by writing a regex based on error messages:
+
+```yaml
+parameters:
+    ignoreErrors:
+        - '#Call to an undefined method .*badMethod\(\)#'
+```
+
+### Baseline file
+
+In older codebases it might be hard to spend the time fixing all the code to pass a high PHPStan Level. 
+
+To get around this a baseline file can be generated. The baseline file will create a configuration file with all of the current errors, so new code can be written following a higher standard than the old code. ([PHPStan Docs](https://phpstan.org/user-guide/baseline))
+
+```bash
+./vendor/bin/phpstan analyse --generate-baseline
+```
+
+## Rules
+
+A list of configurable rules specific to Laravel can be found [here](docs/rules.md).
+
+
+## Features
+
+A list of Larastan features can be found [here](docs/features.md).
+
+## Custom PHPDoc types
+
+A list of PHPDoc types specific to Larastan can be found [here](docs/custom-types.md).
+
+## Custom PHPStan config parameters
+
+A list of custom config parameters that you can use in your PHPStan config file can be found [here](docs/custom-config-parameters.md).
+
+## Errors To Ignore
+
+Some parts of Laravel are currently too magical for Larastan/PHPStan to understand.
+We listed common [errors to ignore](docs/errors-to-ignore.md), add them as needed
+
+## 👊🏻 Contributing
+
+Thank you for considering contributing to Larastan. All the contribution guidelines are mentioned [here](CONTRIBUTING.md).
+
+You can have a look at the [CHANGELOG](CHANGELOG.md) for constant updates & detailed information about the changes. You can also follow the Twitter account for the latest announcements or just come say hi!: [@enunomaduro](https://twitter.com/enunomaduro), [@can__vural](https://twitter.com/can__vural).
+
+
+## Code of Conduct
+
+In order to ensure that the community is welcoming to all, please review and abide by the [Code of Conduct](CODE_OF_CONDUCT.md).
+
+## License
+
+Testbench is open-sourced software licensed under the [MIT license](LICENSE).

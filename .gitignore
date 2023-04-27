@@ -9,5 +9,5 @@ vendor
 .phpunit.cache
 
 # IDE stuff
-.idea/
-.vscode/
+.idea/*
+.vscode/*
