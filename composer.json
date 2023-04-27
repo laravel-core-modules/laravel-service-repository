@@ -50,9 +50,7 @@
   },
   "autoload": {
     "psr-4": {
-      "LaravelCoreModule\\ServiceRepository\\": "src/",
-      "LaravelCoreModule\\ServiceRepository\\Repository\\": "core/Repository/",
-      "LaravelCoreModule\\ServiceRepository\\Service\\": "core/Service/"
+      "LaravelCoreModule\\ServiceRepository\\": "src/"
     }
   },
   "autoload-dev": {
@@ -61,9 +59,10 @@
     }
   },
   "extra": {
+
     "laravel": {
-      "dont-discover": [
-        "laraval-core-modules/service-repository"
+      "providers": [
+        "LaravelCoreModule\\ServiceRepository\\RepositoryServiceProvider"
       ]
     }
   },
