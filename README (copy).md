@@ -1,0 +1,7 @@
+Package discoring in composer.json
+core/Repository renaming
+automatique module name renaming
+RepositoryServiceProvider registration in config/app
+
+
+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

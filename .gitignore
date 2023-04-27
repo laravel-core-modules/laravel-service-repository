@@ -1,0 +1,13 @@
+# Not commiting composer.lock as this is a library project
+composer.lock
+
+# Dependencies
+vendor
+
+# PHPUnit
+.phpunit.result.cache
+.phpunit.cache
+
+# IDE stuff
+.idea/
+.vscode/

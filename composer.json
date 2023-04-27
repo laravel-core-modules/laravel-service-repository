@@ -1,0 +1,87 @@
+{
+  "name": "laraval-core-modules/service-repository",
+  "description": "This is a simple and extensible package for improving development time via service and repository for Laravel.",
+  "homepage": "http://github.com/cocorine999/laravel-service-repository",
+  "license": "MIT",
+  "type": "packages",
+  "keywords": [
+      "service-repository",
+      "laraval-core-modules",
+      "laravel",
+      "package",
+      "repository",
+      "service",
+      "data-transfert-object",
+      "dto",
+      "trait",
+      "rules",
+      "dependency-injection"
+  ],
+  "authors": [
+    {
+      "name": "Corine BOCOGA",
+      "contacts": {
+        "emails": [
+          "cocorine999@gmail.com",
+          "corinebocog@gmail.com"
+        ],
+        "phone_number": "+229 620 048 67"
+      },
+      "homepage": "https://corine.b.github",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "composer/class-map-generator": "^1",
+    "illuminate/contracts": "^9.2.1 || ^10",
+    "illuminate/support": "^9.2.1 || ^10",
+    "laminas/laminas-code": "^3.4 || ^4",
+    "nikic/php-parser": "^4.15",
+    "guzzlehttp/guzzle": "^7.2",
+    "laravel/framework": "^10.8",
+    "laravel/tinker": "^2.8"
+  },
+  "require-dev": {
+      "doctrine/dbal": "^3.5.1",
+      "mockery/mockery": "^1.5.1"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "LaravelCoreModule\\ServiceRepository": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "LaravelCoreModule\\ServiceRepository\\Tests\\": "tests"
+    }
+  },
+  "config": {
+      "allow-plugins": {
+          "pestphp/pest-plugin": true
+      }
+  },
+  "extra": {
+      "laravel": {
+          "providers": [
+              "LaravelCoreModule\\ServiceRepository\\RepositoryServiceProvider"
+          ]
+      }
+  },
+  "scripts": {
+      "post-autoload-dump": [
+          "@php vendor/bin/testbench package:discover"
+      ],
+      "all": [
+          "composer normalize",
+          "@fix",
+          "@test",
+          "@stan"
+      ],
+      "fix": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+      "stan": "phpstan",
+      "test": "phpunit"
+  }
+}
