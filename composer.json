@@ -60,8 +60,8 @@
   }, 
   "extra": {
     "laravel": {
-      "providers": [
-        "LaravelCoreModule\\ServiceRepository\\RepositoryServiceProvider"
+      "dont-discover": [
+        "laraval-core-modules/service-repository"
       ]
     }
   },
