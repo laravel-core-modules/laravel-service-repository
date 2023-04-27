@@ -25,7 +25,7 @@ Created by [Corine BOCOGA](https://corine.b.github)
 
 ## Official Documentation
 
-Documentation for Testbench can be found on the [packages.tools/testbench](https://packages.tools/testbench).
+Documentation for ServiceRepository can be found on the [packages.tools/testbench](https://packages.tools/laravel-core-modules/laravel-service-repository).
 
 ## Jump To
 
