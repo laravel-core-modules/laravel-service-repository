@@ -50,14 +50,26 @@
   },
   "autoload": {
     "psr-4": {
-      "LaravelCoreModule\\ServiceRepository\\": "src/",
-      "LaravelCoreModule\\ServiceRepository\\Repository\\": "core/Repository/",
-      "LaravelCoreModule\\ServiceRepository\\Service\\": "core/Service/"
+      "LaravelCoreModule\\ServiceRepository": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "LaravelCoreModule\\ServiceRepository\\Tests\\": "tests/"
+      "LaravelCoreModule\\ServiceRepository\\Tests\\": "tests"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin-laravel": true,
+      "php-http/discovery": true,
+      "pestphp/pest-plugin": true
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "LaravelCoreModule\\ServiceRepository\\RepositoryServiceProvider"
+      ]
     }
   },
   "scripts": {
@@ -74,19 +86,6 @@
     "stan": "phpstan",
     "test": "phpunit"
   },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "LaravelCoreModule\\ServiceRepository\\RepositoryServiceProvider\\"
-      ]
-    }
-  },
   "minimum-stability": "dev",
-  "prefer-stable": true,
-  "config": {
-    "allow-plugins": {
-      "php-http/discovery": true,
-      "pestphp/pest-plugin": true
-    }
-  }
+  "prefer-stable": true
 }
