@@ -51,7 +51,6 @@
   "autoload": {
     "psr-4": {
       "LaravelCoreModule\\ServiceRepository\\": "src/",
-      "LaravelCoreModule\\ServiceRepository\\RepositoryServiceProvider\\": "src/RepositoryServiceProvider/",
       "LaravelCoreModule\\ServiceRepository\\Repository\\": "core/Repository/",
       "LaravelCoreModule\\ServiceRepository\\Service\\": "core/Service/"
     }
@@ -61,12 +60,32 @@
       "LaravelCoreModule\\ServiceRepository\\Tests\\": "tests/"
     }
   },
+  "scripts": {
+    "post-autoload-dump": [
+      "@php vendor/bin/testbench package:discover --ansi"
+    ],
+    "all": [
+      "composer normalize",
+      "@fix",
+      "@test",
+      "@stan"
+    ],
+    "fix": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+    "stan": "phpstan",
+    "test": "phpunit"
+  },
+  "extra": {
+    "laravel": {
+      "dont-discover": [
+        "laraval-core-modules/service-repository"
+      ]
+    }
+  },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "config": {
     "allow-plugins": {
-      "php-http/discovery": true,
-      "pestphp/pest-plugin": true
+      "php-http/discovery": true
     }
   }
 }
