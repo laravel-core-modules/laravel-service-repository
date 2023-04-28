@@ -34,15 +34,15 @@ class RepositoryServiceProvider extends ServiceProvider
 
         // Core
         $this->publishes([
-            __DIR__.'./../config/core/' => base_path('core'),
-            __DIR__.'./../config/core/epository' => base_path('core/Repository'),
-            __DIR__.'./../config/core/Service' => base_path('core/Service'),
+            __DIR__.'/../config/core/' => base_path('core'),
+            __DIR__.'/../config/core/epository' => base_path('core/Repository'),
+            __DIR__.'/../config/core/Service' => base_path('core/Service'),
         ], 'core');
 
         if ($this->app->runningInConsole()) {
 
             $this->publishes([
-                __DIR__.'./../config/app.php' => config_path('service-repository.php'),
+                __DIR__.'/../config/app.php' => config_path('service-repository.php'),
             ], 'config');
 
         }
