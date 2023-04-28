@@ -1,0 +1,14 @@
+<?php
+
+namespace LaravelCoreModule\ServiceRepository\Repository;
+namespace LaravelCoreModule\ServiceRepository;
+
+
+/**
+ * Interface CustomRepositoryInterface
+ * 
+ * @package LaravelCoreModule\ServiceRepository\Repository
+ */
+Interface CustomRepositoryInterface{
+
+}

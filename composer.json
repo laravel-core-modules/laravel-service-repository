@@ -1,7 +1,7 @@
 {
   "name": "laraval-core-modules/service-repository",
   "description": "This is a simple and extensible package for improving development time via service and repository for Laravel.",
-  "homepage": "http://github.com/laravel-core-modules/laravel-service-repository",
+  "homepage": "https://github.com/laravel-core-modules/laravel-service-repository",
   "license": "MIT",
   "type": "packages",
   "keywords": [
@@ -17,6 +17,12 @@
     "rules",
     "dependency-injection"
   ],
+  "repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/laravel-core-modules/laravel-service-repository"
+    }
+  ],
   "authors": [
     {
       "name": "Corine BOCOGA",
@@ -29,7 +35,8 @@
     "php": "^8.1",
     "guzzlehttp/guzzle": "^7.5",
     "laravel/framework": "^10.8",
-    "laravel/tinker": "^2.8"
+    "laravel/tinker": "^2.8",
+    "illuminate/support": "^10.9"
   },
   "require-dev": {
     "fakerphp/faker": "^1.9.1",
@@ -63,7 +70,9 @@
   "scripts": {
     "post-autoload-dump": [
       "@php vendor/bin/testbench package:discover --ansi",
-      "@php artisan package:discover --ansi"
+      "@php artisan package:discover --ansi",
+      "@php artisan vendor:publish --tag={core} --force"
+
     ],
     "all": [
       "composer normalize",
@@ -86,7 +95,8 @@
   "prefer-stable": true,
   "config": {
     "allow-plugins": {
-      "php-http/discovery": true
+      "php-http/discovery": true,
+      "pestphp/pest-plugin": true
     }
   }
 }
