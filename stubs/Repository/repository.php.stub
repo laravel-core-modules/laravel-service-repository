@@ -1,0 +1,24 @@
+<?php
+
+namespace LaravelCoreModule\ServiceRepository;
+
+use LaravelCoreModule\ServiceRepository\Repository\AbstractRepository;
+use LaravelCoreModule\ServiceRepository;
+use Illuminate\Database\Eloquent\Model;
+
+
+/**
+ * Class AbstractRepository
+ * 
+ * @package LaravelCoreModule\ServiceRepository\Repository
+ */
+Class ModuleRepository extends AbstractRepository implements AbstractRepository{
+
+
+    public function __construct(private readonly Model $model)
+    {
+        $this->model = $model;
+    }
+
+
+}

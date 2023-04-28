@@ -1,8 +1,8 @@
 <?php
 
 use LaravelCoreModule\ServiceRepository\Tests\ServiceRepositoryCase;
-uses(ServiceRepositoryCase::class)->in(__DIR__);
 
+uses(ServiceRepositoryCase::class)->in(__DIR__);
 
 /*
 |--------------------------------------------------------------------------

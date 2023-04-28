@@ -7,25 +7,21 @@ use Orchestra\Testbench\TestCase;
 
 class ServiceRepositoryCase extends TestCase
 {
-  public function setUp(): void
-  {
-    parent::setUp();
-    // additional setup
-  }
+    public function setUp(): void
+    {
+        parent::setUp();
+        // additional setup
+    }
 
-  /**
-   * 
-   * @return array
-   */
-  protected function getPackageProviders($app): array
-  {
-    return [
-      RepositoryServiceProvider::class,
-    ];
-  }
+    protected function getPackageProviders($app): array
+    {
+        return [
+            RepositoryServiceProvider::class,
+        ];
+    }
 
-  protected function getEnvironmentSetUp($app)
-  {
-    // perform environment setup
-  }
+    protected function getEnvironmentSetUp($app)
+    {
+        // perform environment setup
+    }
 }
