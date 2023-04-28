@@ -61,7 +61,7 @@
   "extra": {
     "laravel": {
       "dont-discover": [
-        "laraval-core-modules/service-repository"
+        "laraval-core-modules/service-repository"g
       ]
     }
   },
